@@ -4,17 +4,8 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import CallToAction from "./ui/CallToAction";
-import technologyAnimation from "../animations/technologyAnimation/data.json";
-import consultation from "../assets/consultationIcon.svg";
-import vision from "../assets/vision.svg";
-import mockup from "../assets/mockupIcon.svg";
-import review from "../assets/reviewIcon.svg";
-import design from "../assets/designIcon.svg";
-import build from "../assets/buildIcon.svg";
-import launch from "../assets/launchIcon.svg";
-import maintain from "../assets/maintainIcon.svg";
-import iterate from "../assets/iterateIcon.svg";
+import CallToAction from "../src/ui/CallToAction";
+import technologyAnimation from "../src/animations/technologyAnimation/data.json";
 
 const useStyles = makeStyles((theme) => ({
   heading: {
@@ -159,7 +150,7 @@ const Revolution = (props) => {
         >
           <img
             style={{ maxWidth: smallest ? "80%" : "30em" }}
-            src={vision}
+            src="/assets/vision.svg"
             alt="Alberta Vision background"
           />
         </Grid>
@@ -293,7 +284,7 @@ const Revolution = (props) => {
         <Grid item className={classes.imgContainer} lg>
           <img
             style={{ maxWidth: smallest ? "80%" : "50em" }}
-            src={consultation}
+            src="/assets/consultationIcon.svg"
             alt="handshake"
           />
         </Grid>
@@ -343,7 +334,7 @@ const Revolution = (props) => {
         <Grid item className={classes.imgContainer} lg>
           <img
             style={{ maxWidth: smallest ? "80%" : "80%" }}
-            src={mockup}
+            src="/assets/mockupIcon.svg"
             alt="monitor with website mockup"
           />
         </Grid>
@@ -389,7 +380,7 @@ const Revolution = (props) => {
         <Grid item className={classes.imgContainer} lg>
           <img
             style={{ maxWidth: smallest ? "80%" : "80%" }}
-            src={review}
+            src="/assets/reviewIcon.svg"
             alt="magnifying glass"
           />
         </Grid>
@@ -436,7 +427,7 @@ const Revolution = (props) => {
         <Grid item className={classes.imgContainer} lg>
           <img
             style={{ maxWidth: smallest ? "80%" : "80%" }}
-            src={design}
+            src="/assets/designIcon.svg"
             alt="paint brush leaving a stroke of paint"
           />
         </Grid>
@@ -479,7 +470,7 @@ const Revolution = (props) => {
         <Grid item className={classes.imgContainer} lg>
           <img
             style={{ maxWidth: smallest ? "80%" : "80%" }}
-            src={review}
+            src="/assets/reviewIcon.svg"
             alt="magnifying glass"
           />
         </Grid>
@@ -521,7 +512,7 @@ const Revolution = (props) => {
         <Grid item className={classes.imgContainer} lg>
           <img
             style={{ maxWidth: smallest ? "80%" : "80%" }}
-            src={build}
+            src="/assets/buildIcon.svg"
             alt="a crane machine wtih a building under construction"
           />
         </Grid>
@@ -581,7 +572,7 @@ const Revolution = (props) => {
         <Grid item className={classes.launchImgContainer} lg>
           <img
             style={{ maxWidth: smallest ? "80%" : "80%" }}
-            src={launch}
+            src="/assets/launchIcon.svg"
             alt="rocket on a launch pad"
           />
         </Grid>
@@ -628,7 +619,7 @@ const Revolution = (props) => {
         <Grid item className={classes.imgContainer} lg>
           <img
             style={{ maxWidth: smallest ? "80%" : "80%" }}
-            src={maintain}
+            src="/assets/maintainIcon.svg"
             alt="a wrench and some screws"
           />
         </Grid>
@@ -674,7 +665,7 @@ const Revolution = (props) => {
         <Grid item className={classes.imgContainer} lg>
           <img
             style={{ maxWidth: smallest ? "80%" : "80%" }}
-            src={iterate}
+            src="assets/iterateIcon.svg"
             alt="falling dominos"
           />
         </Grid>

@@ -1,18 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "../src/Link.js";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Hidden from "@material-ui/core/Hidden";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-import backArrow from "../assets/backArrow.svg";
-import forwardArrow from "../assets/forwardArrow.svg";
 import CallToAction from "./ui/CallToAction";
-import analyticsGraph from "../assets/analytics.svg";
-import ecommerceWorld from "../assets/ecommerce.svg";
-import seo from "../assets/seo.svg";
-import outreach from "../assets/outreach.svg";
 
 const useStyles = makeStyles((theme) => ({
   heading: {
@@ -79,13 +73,16 @@ const Websites = (props) => {
             <IconButton
               className={classes.arrowIcons}
               component={Link}
-              to="/mobileapps"
+              href="/mobileapps"
               onClick={() => {
                 props.setValue(1);
                 props.setSelected(1);
               }}
             >
-              <img src={backArrow} alt="Back to Mobile App Development Page" />
+              <img
+                src="/assets/backArrow.svg"
+                alt="Back to Mobile App Development Page"
+              />
             </IconButton>
           </Grid>
         </Hidden>
@@ -121,13 +118,16 @@ const Websites = (props) => {
             <IconButton
               className={classes.arrowIcons}
               component={Link}
-              to="/services"
+              href="/services"
               onClick={() => {
                 props.setValue(1);
                 props.setSelected(null);
               }}
             >
-              <img src={forwardArrow} alt="Forward to Services Page" />
+              <img
+                src="/assets/forwardArrow.svg"
+                alt="Forward to Services Page"
+              />
             </IconButton>
           </Grid>
         </Hidden>
@@ -142,7 +142,7 @@ const Websites = (props) => {
       >
         <Grid item>
           <img
-            src={analyticsGraph}
+            src="/assets/analytics.svg"
             style={{ maxWidth: medium ? 255 : "100%" }}
             alt="graph with magnifying glass"
           />
@@ -175,7 +175,7 @@ const Websites = (props) => {
       >
         <Grid item>
           <img
-            src={ecommerceWorld}
+            src="/assets/ecommerce.svg"
             style={{ maxWidth: medium ? 255 : "100%" }}
             alt="graph with magnifying glass"
           />
@@ -209,7 +209,7 @@ const Websites = (props) => {
       >
         <Grid item>
           <img
-            src={outreach}
+            src="/assets/outreach.svg"
             style={{ maxWidth: medium ? 255 : "100%" }}
             alt="graph with magnifying glass"
           />
@@ -241,7 +241,7 @@ const Websites = (props) => {
       >
         <Grid item>
           <img
-            src={seo}
+            src="/assets/seo.svg"
             style={{ maxWidth: medium ? 255 : "100%" }}
             alt="graph with magnifying glass"
           />

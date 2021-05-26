@@ -1,6 +1,6 @@
 import React from "react";
 import Lottie from "react-lottie";
-import { Link } from "react-router-dom";
+import Link from "../src/Link";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
@@ -8,14 +8,9 @@ import Typography from "@material-ui/core/Typography";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
-import animationData from "../animations/landinganimation/data.js";
-import ButtonArrow from "./ui/ButtonArrow";
-import softwareIcon from "../assets/Custom Software Icon.svg";
-import appsIcon from "../assets/mobile.svg";
-import webIcon from "../assets/website.svg";
-import repeatingBackground from "../assets/repeatingBackground.svg";
-import infoBackground from "../assets/infoBackground.jpg";
-import CallToAction from "./ui/CallToAction";
+import animationData from "../src/animations/landinganimation/data.js";
+import ButtonArrow from "../src/ui/ButtonArrow";
+import CallToAction from "../src/ui/CallToAction";
 
 const useStyles = makeStyles((theme) => ({
   animation: {
@@ -126,13 +121,12 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "25em",
   },
   revolutionBackground: {
-    backgroundImage: `url(${repeatingBackground})`,
+    backgroundImage: url("/assets/repeatingBackground.svg"),
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     height: "100%",
     width: "100%",
-    
   },
   revolutionCard: {
     position: "absolute",
@@ -152,7 +146,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   infoBackground: {
-    backgroundImage: `url(${infoBackground})`,
+    backgroundImage: url("/assets/infoBackground.jpg"),
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
@@ -169,14 +163,14 @@ const LandingPage = (props) => {
   const softwareIconJSX = (
     <Grid container justify={smaller ? "center" : undefined}>
       <Grid item className={classes.serviceIcon}>
-        <img src={softwareIcon} alt="Software Icon" />
+        <img src="/assets/customSoftware.svg" alt="Software Icon" />
       </Grid>
     </Grid>
   );
   const websiteIconJSX = (
     <Grid container justify={smaller ? "center" : undefined}>
       <Grid item className={classes.serviceIcon}>
-        <img src={webIcon} alt="Software Icon" />
+        <img src="/assets/website.svg" alt="Website Icon" />
       </Grid>
     </Grid>
   );
@@ -187,7 +181,7 @@ const LandingPage = (props) => {
         className={classes.serviceIcon}
         style={{ marginRight: smaller ? 0 : "5em" }}
       >
-        <img src={appsIcon} alt="Mobile Icon" />
+        <img src="/assets/mobile.svg" alt="Mobile Icon" />
       </Grid>
     </Grid>
   );
@@ -223,7 +217,7 @@ const LandingPage = (props) => {
               <Grid item>
                 <Button
                   component={Link}
-                  to="/estimate"
+                  href="/estimate"
                   onClick={() => {
                     props.setValue(5);
                     props.setSelected(null);
@@ -238,7 +232,7 @@ const LandingPage = (props) => {
               <Grid item>
                 <Button
                   component={Link}
-                  to="/revolution"
+                  href="/revolution"
                   onClick={() => {
                     props.setValue(2);
                     props.setSelected(null);
@@ -283,7 +277,7 @@ const LandingPage = (props) => {
             </Typography>
             <Button
               component={Link}
-              to="/software"
+              href="/software"
               onClick={() => {
                 props.setValue(1);
                 props.setSelected(0);
@@ -321,7 +315,7 @@ const LandingPage = (props) => {
             </Typography>
             <Button
               component={Link}
-              to="/mobileapps"
+              href="/mobileapps"
               onClick={() => {
                 props.setValue(1);
                 props.setSelected(1);
@@ -361,7 +355,7 @@ const LandingPage = (props) => {
             </Typography>
             <Button
               component={Link}
-              to="/websites"
+              href="/websites"
               onClick={() => {
                 props.setValue(1);
                 props.setSelected(2);
@@ -404,7 +398,7 @@ const LandingPage = (props) => {
                   </Typography>
                   <Button
                     component={Link}
-                    to="/revolution"
+                    href="/revolution"
                     onClick={() => {
                       props.setValue(2);
                       props.setSelected(null);
@@ -451,7 +445,7 @@ const LandingPage = (props) => {
                 <Grid item>
                   <Button
                     component={Link}
-                    to="/about"
+                    href="/about"
                     onClick={() => {
                       props.setValue(3);
                       props.setSelected(null);
@@ -484,7 +478,7 @@ const LandingPage = (props) => {
                 <Grid item>
                   <Button
                     component={Link}
-                    to="/contact"
+                    href="/contact"
                     onClick={() => {
                       props.setValue(4);
                       props.setSelected(null);

@@ -1,14 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "../src/Link";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import ButtonArrow from "./ui/ButtonArrow";
-import softwareIcon from "../assets/Custom Software Icon.svg";
-import appsIcon from "../assets/mobile.svg";
-import webIcon from "../assets/website.svg";
+import ButtonArrow from "../src/ui/ButtonArrow";
 
 const useStyles = makeStyles((theme) => ({
   learnOutlineButton: {
@@ -105,14 +102,14 @@ const Services = (props) => {
   const softwareIconJSX = (
     <Grid container justify={smaller ? "center" : undefined} >
       <Grid item className={classes.serviceIcon}>
-        <img src={softwareIcon} alt="Software Icon" />
+        <img src="/assets/customSoftware.svg" alt="Software Icon" />
       </Grid>
     </Grid>
   );
   const websiteIconJSX = (
     <Grid container justify={smaller ? "center" : undefined} style={{marginRight: smaller ? 0 : "5em",}}>
       <Grid item className={classes.serviceIcon}>
-        <img src={webIcon} alt="Software Icon" />
+        <img src="/assets/website.svg" alt="Software Icon" />
       </Grid>
     </Grid>
   );
@@ -123,7 +120,7 @@ const Services = (props) => {
         className={classes.serviceIcon}
         style={{ marginRight: smaller ? 0 : "5em" }}
       >
-        <img src={appsIcon} alt="Mobile Icon" />
+        <img src="/assets/mobile.svg" alt="Mobile Icon" />
       </Grid>
     </Grid>
   );
@@ -155,7 +152,7 @@ const Services = (props) => {
             </Typography>
             <Button
               component={Link}
-              to="/mobileapps"
+              href="/mobileapps"
               onClick={() => {
                 props.setValue(1);
                 props.setSelected(1);
@@ -197,7 +194,7 @@ const Services = (props) => {
             </Typography>
             <Button
               component={Link}
-              to="/software"
+              href="/software"
               onClick={() => {
                 props.setValue(1);
                 props.setSelected(0);
@@ -237,7 +234,7 @@ const Services = (props) => {
             </Typography>
             <Button
               component={Link}
-              to="/websites"
+              href="/websites"
               onClick={() => {
                 props.setValue(1);
                 props.setSelected(2);

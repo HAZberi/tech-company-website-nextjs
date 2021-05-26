@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "../src/Link.js";
 import Lottie from "react-lottie";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
@@ -7,13 +7,8 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import Hidden from "@material-ui/core/Hidden";
-import backArrow from "../assets/backArrow.svg";
-import forwardArrow from "../assets/forwardArrow.svg";
-import CallToAction from "./ui/CallToAction";
-import integrationAnimation from "../animations/integrationAnimation/data.json";
-import knife from "../assets/swissKnife.svg";
-import extendingAccess from "../assets/extendAccess.svg";
-import engagement from "../assets/increaseEngagement.svg";
+import integrationAnimation from "../src/animations/integrationAnimation/data.json";
+import CallToAction from "../src/ui/CallToAction";
 
 const useStyles = makeStyles((theme) => ({
   heading: {
@@ -102,13 +97,16 @@ const MobileApps = (props) => {
             <IconButton
               className={classes.arrowIcons}
               component={Link}
-              to="/software"
+              href="/software"
               onClick={() => {
                 props.setValue(1);
                 props.setSelected(0);
               }}
             >
-              <img src={backArrow} alt="Back to Software Development Page" />
+              <img
+                src="/assets/backArrow.svg"
+                alt="Back to Software Development Page"
+              />
             </IconButton>
           </Grid>
         </Hidden>
@@ -147,14 +145,14 @@ const MobileApps = (props) => {
             <IconButton
               className={classes.arrowIcons}
               component={Link}
-              to="/websites"
+              href="/websites"
               onClick={() => {
                 props.setValue(1);
                 props.setSelected(2);
               }}
             >
               <img
-                src={forwardArrow}
+                src="/assets/forwardArrow.svg"
                 alt="Forward to Website Development Page"
               />
             </IconButton>
@@ -240,7 +238,7 @@ const MobileApps = (props) => {
           <Grid item style={{ marginTop: "2em" }}>
             <img
               style={{ maxWidth: 200 }}
-              src={knife}
+              src="/assets/swissKnife.svg"
               alt="army swiss knife  icon"
             />
           </Grid>
@@ -253,8 +251,8 @@ const MobileApps = (props) => {
           alignItems="center"
           style={{
             maxWidth: smaller ? "100%" : "30em",
-            marginLeft: medium ? smaller ? 0 : "2em" : 0,
-            marginRight: medium ? smaller ? 0 : "2em" : 0,
+            marginLeft: medium ? (smaller ? 0 : "2em") : 0,
+            marginRight: medium ? (smaller ? 0 : "2em") : 0,
             marginTop: smaller ? "7em" : 0,
             marginBottom: smaller ? "7em" : 0,
           }}
@@ -265,8 +263,9 @@ const MobileApps = (props) => {
           <Grid item style={{ marginTop: "2em" }}>
             <img
               style={{ maxWidth: smallest ? 250 : 300 }}
-              src={extendingAccess}
-              alt="extending form options"/>
+              src="/assets/extendingAccess.svg"
+              alt="extending form options"
+            />
           </Grid>
         </Grid>
         <Grid
@@ -283,7 +282,7 @@ const MobileApps = (props) => {
           <Grid item style={{ marginTop: "2em" }}>
             <img
               style={{ maxWidth: 180 }}
-              src={engagement}
+              src="/assets/increaseEngagement.svg"
               alt="notification on folder icon"
             />
           </Grid>

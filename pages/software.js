@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "../src/Link.js";
 import Lottie from "react-lottie";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
@@ -7,17 +7,11 @@ import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Hidden from "@material-ui/core/Hidden";
-import backArrow from "../assets/backArrow.svg";
-import forwardArrow from "../assets/forwardArrow.svg";
-import lightbulb from "../assets/bulb.svg";
-import cash from "../assets/cash.svg";
-import stopwatch from "../assets/stopwatch.svg";
-import documentsAnimation from "../animations/documentsAnimation/data.js";
-import scaleAnimation from "../animations/scaleAnimation/data.json";
-import automationAnimation from "../animations/automationAnimation/data.json";
-import uxAnimation from "../animations/uxAnimation/data.js";
-import rootTree from "../assets/root.svg";
-import CallToAction from "./ui/CallToAction";
+import documentsAnimation from "../src/animations/documentsAnimation/data.js";
+import scaleAnimation from "../src/animations/scaleAnimation/data.json";
+import automationAnimation from "../src/animations/automationAnimation/data.json";
+import uxAnimation from "../src/animations/uxAnimation/data.js";
+import CallToAction from "../src/ui/CallToAction";
 
 const useStyles = makeStyles((theme) => ({
   heading: {
@@ -177,13 +171,13 @@ const Software = (props) => {
             <IconButton
               className={classes.arrowIcons}
               component={Link}
-              to="/services"
+              href="/services"
               onClick={() => {
                 props.setValue(1);
                 props.setSelected(null);
               }}
             >
-              <img src={backArrow} alt="Back to Services Page" />
+              <img src="/assets/backArrow.svg" alt="Back to Services Page" />
             </IconButton>
           </Grid>
         </Hidden>
@@ -230,13 +224,16 @@ const Software = (props) => {
             <IconButton
               className={classes.arrowIcons}
               component={Link}
-              to="/mobileapps"
+              href="/mobileapps"
               onClick={() => {
                 props.setValue(1);
                 props.setSelected(1);
               }}
             >
-              <img src={forwardArrow} alt="Forward to App Development Page" />
+              <img
+                src="/assets/forwardArrow.svg"
+                alt="Forward to App Development Page"
+              />
             </IconButton>
           </Grid>
         </Hidden>
@@ -246,7 +243,7 @@ const Software = (props) => {
         container
         direction={smallest ? "column" : "row"}
         alignItems={smallest ? "center" : undefined}
-        style={{marginTop: "-5em"}}
+        style={{ marginTop: "-5em" }}
         justify="center"
         className={classes.rowContainer}
       >
@@ -259,7 +256,7 @@ const Software = (props) => {
           style={{ maxWidth: smaller ? "13em" : "40em", marginTop: "5em" }}
         >
           <Grid item>
-            <img src={stopwatch} alt="stopWatch icon" />
+            <img src="/assets/stopwatch.svg" alt="stopWatch icon" />
           </Grid>
           <Grid item>
             <Typography variant="h4">Save Time</Typography>
@@ -274,7 +271,7 @@ const Software = (props) => {
           style={{ maxWidth: smaller ? "13em" : "40em", marginTop: "5em" }}
         >
           <Grid item>
-            <img src={lightbulb} alt="lightbulb icon" />
+            <img src="/assets/bulb.svg" alt="lightbulb icon" />
           </Grid>
           <Grid item>
             <Typography variant="h4">Save Energy</Typography>
@@ -289,7 +286,7 @@ const Software = (props) => {
           style={{ maxWidth: smaller ? "13em" : "40em", marginTop: "5em" }}
         >
           <Grid item>
-            <img src={cash} alt="cash icon" />
+            <img src="/assets/cash.svg" alt="cash icon" />
           </Grid>
           <Grid item>
             <Typography variant="h4">Save Money</Typography>
@@ -343,7 +340,7 @@ const Software = (props) => {
           alignItems={medium ? "center" : smaller ? "center" : "flex-start"}
           direction={smaller ? "column" : "row"}
           className={classes.itemContainer}
-          style={{marginBottom: 0}}
+          style={{ marginBottom: 0 }}
           md
         >
           {medium ? (smaller ? scaleAnimationJSX : null) : scaleAnimationJSX}
@@ -370,16 +367,11 @@ const Software = (props) => {
           {medium ? (smaller ? null : scaleAnimationJSX) : null}
         </Grid>
       </Grid>
-      <Grid
-        item
-        className={classes.rowContainer}
-        container
-        direction="row"
-      >
+      <Grid item className={classes.rowContainer} container direction="row">
         <Grid item container direction="column" alignItems="center">
           <Grid item style={{ marginBottom: "1rem" }}>
             <img
-              src={rootTree}
+              src="/assets/root.svg"
               alt="a tree with roots"
               height={smallest ? "300em" : "400em"}
               width={smallest ? "300em" : "400em"}
