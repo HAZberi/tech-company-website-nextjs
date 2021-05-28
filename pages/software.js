@@ -297,7 +297,7 @@ const Software = (props) => {
         item
         container
         direction={medium ? "column" : "row"}
-        alignItems={smaller ? "center" : "inherit"}
+        alignItems={smaller ? "center" : "flex-start"}
         justify="space-around"
         className={classes.rowContainer}
       >
@@ -399,7 +399,7 @@ const Software = (props) => {
         container
         className={classes.rowContainer}
         direction={medium ? "column" : "row"}
-        alignItems={smaller ? "center" : "inherit"}
+        alignItems={smaller ? "center" : "flex-start"}
         justify="space-around"
       >
         <Grid
