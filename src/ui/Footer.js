@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Hidden from "@material-ui/core/Hidden";
@@ -30,20 +30,19 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       position: "absolute",
       zIndex: 1302,
-      width: "100%",
+      marginTop: "1rem",
+      width: "100vw",
     },
   },
   mainContainer: {
     position: "absolute",
-    marginTop: "auto",
     marginRight: 0,
-    width: "100%",
+    width: "100vw",
     overflow: "hidden",
-    paddingLeft: "2rem",
+    marginLeft: "0.4rem",
     [theme.breakpoints.down("md")]: {
-      marginTop: "0.5rem",
       justifyContent: "flex-end",
-      paddingRight: "9%",
+      paddingRight: "10%",
       margin: 0,
     },
   },
@@ -86,6 +85,14 @@ const useStyles = makeStyles((theme) => ({
       padding: 0,
     },
   },
+  navColumns: {
+      marginTop: "1.25rem",
+      marginBottom: "-0.55rem",
+    [theme.breakpoints.down("md")]: {
+      padding: "0rem",
+      margin: 0,
+    },
+  }
 }));
 
 const Footer = (props) => {
@@ -93,6 +100,17 @@ const Footer = (props) => {
   const theme = useTheme();
   const medium = useMediaQuery(theme.breakpoints.down("md"));
   const smaller = useMediaQuery(theme.breakpoints.down("sm"));
+
+  const [homeNavStyles, setHomeNavStyles] = useState({});
+
+  useEffect(()=>{
+    if (window.matchMedia("(max-width: 1360px)").matches){
+      setHomeNavStyles({display: "none"});
+    }else {
+      setHomeNavStyles({})
+    }
+  },[])
+
   return (
     <Grid container className={classes.footer}>
       <Hidden smDown>
@@ -103,16 +121,12 @@ const Footer = (props) => {
           className={classes.mainContainer}
           spacing={medium ? 5 : 10}
         >
-          <Grid item>
+          <Grid item className={classes.navColumns}>
             <Grid container direction="column" spacing={2}>
               <Grid
                 item
                 className={classes.link}
-                style={
-                  window.matchMedia("(max-width: 1450px)").matches
-                    ? { display: "none" }
-                    : {}
-                }
+                style={homeNavStyles}
                 onClick={() => {
                   props.setValue(0);
                   props.setSelected(null);
@@ -124,7 +138,7 @@ const Footer = (props) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid item className={classes.navColumns}>
             <Grid container direction="column" spacing={2}>
               <Grid
                 item
@@ -176,7 +190,7 @@ const Footer = (props) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid item className={classes.navColumns}>
             <Grid container direction="column" spacing={2}>
               <Grid
                 item
@@ -228,7 +242,7 @@ const Footer = (props) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid item className={classes.navColumns}>
             <Grid container direction="column" spacing={2}>
               <Grid
                 item
@@ -268,7 +282,7 @@ const Footer = (props) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid item className={classes.navColumns}>
             <Grid container direction="column" spacing={2}>
               <Grid
                 item
@@ -352,7 +366,7 @@ const Footer = (props) => {
         </Grid>
         {smaller ? (
           <Grid item className={classes.adornment}>
-            <MobileFooterAdornment />
+            <MobileFooterAdornment className={classes.adornment}/>
           </Grid>
         ) : null}
       </Grid>
