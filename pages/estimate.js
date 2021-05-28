@@ -959,7 +959,7 @@ const Estimate = (props) => {
             maxWidth: smaller ? "100%" : "40em",
           }}
         >
-          <Lottie options={defaultOptions} height="100%" width="100%" />
+          <Lottie options={defaultOptions} height="100%" width="100%"/>
         </Grid>
       </Grid>
       <Grid item container direction="column" md>
