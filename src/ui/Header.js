@@ -25,6 +25,7 @@ import Accordion from "@material-ui/core/Accordion";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import ExpandMore from "@material-ui/icons/ExpandMore";
+import Hidden from "@material-ui/core/Hidden";
 
 const useStyles = makeStyles((theme) => ({
   toolbarMargin: {
@@ -543,7 +544,8 @@ const Header = (props) => {
                 alt="company logo"
               />
             </Button>
-            {smaller ? drawer : tabs}
+            <Hidden smDown>{tabs}</Hidden>
+            <Hidden mdUp>{drawer}</Hidden>
           </Toolbar>
         </AppBar>
       </ElevationScroll>
