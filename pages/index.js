@@ -121,7 +121,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "25em",
   },
   revolutionBackground: {
-    backgroundImage: url("/assets/repeatingBackground.svg"),
+    backgroundImage: `url("/assets/repeatingBackground.svg")`,
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
@@ -146,7 +146,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   infoBackground: {
-    backgroundImage: url("/assets/infoBackground.jpg"),
+    backgroundImage: `url("/assets/infoBackground.jpg")`,
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
