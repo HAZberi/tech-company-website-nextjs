@@ -6,7 +6,7 @@ import Hidden from "@material-ui/core/Hidden";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-import CallToAction from "./ui/CallToAction";
+import CallToAction from "../src/ui/CallToAction";
 
 const useStyles = makeStyles((theme) => ({
   heading: {
