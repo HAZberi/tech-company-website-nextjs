@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import Link from "../src/Link";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
@@ -71,27 +72,27 @@ const useStyles = makeStyles((theme) => ({
   appDevDescription: {
     width: "40em",
     [theme.breakpoints.down("lg")]: {
-        width: "32em",
-      },
+      width: "32em",
+    },
     [theme.breakpoints.down("md")]: {
-        maxWidth: "25em",
-      },
+      maxWidth: "25em",
+    },
     [theme.breakpoints.down("sm")]: {
-        width: "40em",
-        maxWidth: "40em",
-        padding: "20px",
-      },
+      width: "40em",
+      maxWidth: "40em",
+      padding: "20px",
+    },
     [theme.breakpoints.down("xs")]: {
-        width: "auto",
-        padding: "20px",
+      width: "auto",
+      padding: "20px",
     },
   },
-  serviceLabelContainer : {
+  serviceLabelContainer: {
     [theme.breakpoints.down("sm")]: {
-        width: "auto",
-        padding: "20px",
+      width: "auto",
+      padding: "20px",
     },
-  }
+  },
 }));
 
 const Services = (props) => {
@@ -100,14 +101,18 @@ const Services = (props) => {
   const smaller = useMediaQuery(theme.breakpoints.down("sm"));
 
   const softwareIconJSX = (
-    <Grid container justify={smaller ? "center" : undefined} >
+    <Grid container justify={smaller ? "center" : undefined}>
       <Grid item className={classes.serviceIcon}>
         <img src="/assets/customSoftware.svg" alt="Software Icon" />
       </Grid>
     </Grid>
   );
   const websiteIconJSX = (
-    <Grid container justify={smaller ? "center" : undefined} style={{marginRight: smaller ? 0 : "5em",}}>
+    <Grid
+      container
+      justify={smaller ? "center" : undefined}
+      style={{ marginRight: smaller ? 0 : "5em" }}
+    >
       <Grid item className={classes.serviceIcon}>
         <img src="/assets/website.svg" alt="Software Icon" />
       </Grid>
@@ -126,130 +131,143 @@ const Services = (props) => {
   );
 
   return (
-    <Grid container direction="column">
-        <Grid item container className={classes.serviceLabelContainer} justify={smaller ? "center" : "flex-start"} style={{paddingLeft: smaller ? "20px" : "5em", marginTop: "2em"}}>
-            <Typography variant="h2">Services</Typography>
-        </Grid>
-      <Grid item>
-        {/* ------ App Block ------- */}
+    <>
+      <Head>
+        <title>Top Technology Services | beri.dev</title>
+      </Head>
+      <Grid container direction="column">
         <Grid
+          item
           container
-          direction="row"
-          className={classes.devContainer}
-          justify={smaller ? "center" : "flex-end"}
+          className={classes.serviceLabelContainer}
+          justify={smaller ? "center" : "flex-start"}
+          style={{ paddingLeft: smaller ? "20px" : "5em", marginTop: "2em" }}
         >
-          <Grid item className={classes.appDevDescription} style={{ textAlign: smaller ? "center" : undefined }}>
-            {smaller ? mobileIconJSX : ""}
-            <Typography variant="h4">Mobile App Development</Typography>
-            <Typography variant="subtitle1" className={classes.subtitle}>
-              Extend Functionality. Extend Access. Increase Engagement.
-            </Typography>
-            <Typography
-              variant="subtitle1"
-            >
-              Integrate your web experience or create a standalone app with
-              either iOS or Android platforms.
-            </Typography>
-            <Button
-              component={Link}
-              href="/mobileapps"
-              onClick={() => {
-                props.setValue(1);
-                props.setSelected(1);
-              }}
-              variant="outlined"
-              className={classes.learnOutlineButton}
-            >
-              Learn More
-              <ButtonArrow width={25} height={18} fill="black" />
-            </Button>
-          </Grid>
-          <Grid item>{smaller ? "" : mobileIconJSX}</Grid>
+          <Typography variant="h2">Services</Typography>
         </Grid>
-      </Grid>
-      <Grid item>
-        {/* ------ Software Block ------- */}
-        <Grid
-          container
-          direction="row"
-          className={classes.devContainer}
-          justify={smaller ? "center" : undefined}
-        >
+        <Grid item>
+          {/* ------ App Block ------- */}
           <Grid
-            item
-            className={classes.appDevDescription}
-            style={{
-              marginLeft: smaller ? 0 : "5em",
-              textAlign: smaller ? "center" : undefined,
-            }}
+            container
+            direction="row"
+            className={classes.devContainer}
+            justify={smaller ? "center" : "flex-end"}
           >
-            {smaller ? softwareIconJSX : ""}
-            <Typography variant="h4">Software Development</Typography>
-            <Typography variant="subtitle1" className={classes.subtitle}>
-              Save Time. Save Energy. Save Money.
-            </Typography>
-            <Typography variant="subtitle1">
-              Complete digital solutions, from investigation to{" "}
-              <span>celebration.</span>
-            </Typography>
-            <Button
-              component={Link}
-              href="/software"
-              onClick={() => {
-                props.setValue(1);
-                props.setSelected(0);
-              }}
-              variant="outlined"
-              className={classes.learnOutlineButton}
+            <Grid
+              item
+              className={classes.appDevDescription}
+              style={{ textAlign: smaller ? "center" : undefined }}
             >
-              Learn More
-              <ButtonArrow width={25} height={18} fill="black" />
-            </Button>
+              {smaller ? mobileIconJSX : ""}
+              <Typography variant="h4">Mobile App Development</Typography>
+              <Typography variant="subtitle1" className={classes.subtitle}>
+                Extend Functionality. Extend Access. Increase Engagement.
+              </Typography>
+              <Typography variant="subtitle1">
+                Integrate your web experience or create a standalone app with
+                either iOS or Android platforms.
+              </Typography>
+              <Button
+                component={Link}
+                href="/mobileapps"
+                onClick={() => {
+                  props.setValue(1);
+                  props.setSelected(1);
+                }}
+                variant="outlined"
+                className={classes.learnOutlineButton}
+              >
+                Learn More
+                <ButtonArrow width={25} height={18} fill="black" />
+              </Button>
+            </Grid>
+            <Grid item>{smaller ? "" : mobileIconJSX}</Grid>
           </Grid>
-          <Grid item>{smaller ? "" : softwareIconJSX}</Grid>
         </Grid>
-      </Grid>
-      <Grid item>
-        {/* ------ Website Block ------- */}
-        <Grid
-          container
-          direction="row"
-          className={classes.webDevContainer}
-          justify={smaller ? "center" : "flex-end"}
-        >
+        <Grid item>
+          {/* ------ Software Block ------- */}
           <Grid
-            item
-            className={classes.appDevDescription}
-            style={{
-              textAlign: smaller ? "center" : undefined,
-            }}
+            container
+            direction="row"
+            className={classes.devContainer}
+            justify={smaller ? "center" : undefined}
           >
-            {smaller ? websiteIconJSX : ""}
-            <Typography variant="h4">Website Development</Typography>
-            <Typography variant="subtitle1" className={classes.subtitle}>
-              Discover More. Reach More. Sell More.
-            </Typography>
-            <Typography variant="subtitle1">
-              Optimized for Search Engines, built for speed.
-            </Typography>
-            <Button
-              component={Link}
-              href="/websites"
-              onClick={() => {
-                props.setValue(1);
-                props.setSelected(2);
+            <Grid
+              item
+              className={classes.appDevDescription}
+              style={{
+                marginLeft: smaller ? 0 : "5em",
+                textAlign: smaller ? "center" : undefined,
               }}
-              variant="outlined"
-              className={classes.learnOutlineButton}
             >
-              Learn More
-              <ButtonArrow width={25} height={18} fill="black" />
-            </Button>
+              {smaller ? softwareIconJSX : ""}
+              <Typography variant="h4">Software Development</Typography>
+              <Typography variant="subtitle1" className={classes.subtitle}>
+                Save Time. Save Energy. Save Money.
+              </Typography>
+              <Typography variant="subtitle1">
+                Complete digital solutions, from investigation to{" "}
+                <span>celebration.</span>
+              </Typography>
+              <Button
+                component={Link}
+                href="/software"
+                onClick={() => {
+                  props.setValue(1);
+                  props.setSelected(0);
+                }}
+                variant="outlined"
+                className={classes.learnOutlineButton}
+              >
+                Learn More
+                <ButtonArrow width={25} height={18} fill="black" />
+              </Button>
+            </Grid>
+            <Grid item>{smaller ? "" : softwareIconJSX}</Grid>
           </Grid>
-          <Grid item>{smaller ? "" : websiteIconJSX}</Grid>
+        </Grid>
+        <Grid item>
+          {/* ------ Website Block ------- */}
+          <Grid
+            container
+            direction="row"
+            className={classes.webDevContainer}
+            justify={smaller ? "center" : "flex-end"}
+          >
+            <Grid
+              item
+              className={classes.appDevDescription}
+              style={{
+                textAlign: smaller ? "center" : undefined,
+              }}
+            >
+              {smaller ? websiteIconJSX : ""}
+              <Typography variant="h4">Website Development</Typography>
+              <Typography variant="subtitle1" className={classes.subtitle}>
+                Discover More. Reach More. Sell More.
+              </Typography>
+              <Typography variant="subtitle1">
+                Optimized for Search Engines, built for speed.
+              </Typography>
+              <Button
+                component={Link}
+                href="/websites"
+                onClick={() => {
+                  props.setValue(1);
+                  props.setSelected(2);
+                }}
+                variant="outlined"
+                className={classes.learnOutlineButton}
+              >
+                Learn More
+                <ButtonArrow width={25} height={18} fill="black" />
+              </Button>
+            </Grid>
+            <Grid item>{smaller ? "" : websiteIconJSX}</Grid>
+          </Grid>
         </Grid>
       </Grid>
-    </Grid>
+    </>
   );
 };
 

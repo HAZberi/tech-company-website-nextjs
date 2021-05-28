@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
@@ -111,220 +112,225 @@ const About = (props) => {
     </Grid>
   );
   return (
-    <Grid container direction="column">
-      <Grid item className={classes.heading}>
-        <Typography variant="h2" gutterBottom>
-          About Us
-        </Typography>
-      </Grid>
-      <Grid item container justify="center" className={classes.rowContainer}>
-        <Typography variant="h4" align="center" className={classes.statement}>
-          Whether it be person, business to consumer, or an individual to their
-          interests, technology is meant to bring us closer to what we care
-          about in the best way possible. beri.dev will use that principle to
-          provide fast, modern inexpensive and aesthetic software to the
-          Prairies and beyond.
-        </Typography>
-      </Grid>
-      <Grid
-        container
-        direction="row"
-        alignItems="center"
-        justify="center"
-        className={classes.rowContainer}
-      >
-        {medium ? historyJSX : null}
-        <Grid
-          item
-          container
-          direction="column"
-          alignItems={smaller ? "center" : "flex-start"}
-          style={{
-            marginLeft: 0,
-            marginRight: medium ? 0 : larger ? "2.5em" : "5em",
-          }}
-          className={classes.itemContainer}
-          lg
-        >
-          <Grid item align={smaller ? "center" : "left"}>
-            <Typography variant="h4" gutterBottom>
-              History
-            </Typography>
-          </Grid>
-          <Grid item style={{ textAlign: smallest ? "center" : "justify" }}>
-            <Typography variant="body1" paragraph>
-              We’re the new kid on the block.
-            </Typography>
-            <Typography variant="body1" paragraph>
-              Founded in 2019, we’re ready to get our hands on the world’s
-              business problems.
-            </Typography>
-            <Typography variant="body1" paragraph>
-              It all started with one question: Why aren’t all businesses using
-              available technology? There are many different answers to that
-              question: economic barriers, social barriers, educational
-              barriers, and sometimes institutional barriers.
-            </Typography>
-            <Typography variant="body1" paragraph>
-              We aim to be a powerful force in overcoming these obstacles.
-              Recent developments in software engineering and computing power,
-              compounded by the proliferation of smart phones, has opened up
-              infinite worlds of possibility. Things that have always been done
-              by hand can now be done digitally and automatically, and
-              completely new methods of interaction are created daily. Taking
-              full advantage of these advancements is the name of the game.
-            </Typography>
-            <Typography variant="body1" paragraph>
-              All this change can be a lot to keep up with, and that’s where we
-              come in.
-            </Typography>
-          </Grid>
+    <>
+      <Head>
+        <title>About us - Team & History | beri.dev</title>
+      </Head>
+      <Grid container direction="column">
+        <Grid item className={classes.heading}>
+          <Typography variant="h2" gutterBottom>
+            About Us
+          </Typography>
         </Grid>
-        {medium ? null : historyJSX}
-      </Grid>
-      <Grid item className={classes.heading} align="center">
-        <Typography variant="h3">Team</Typography>
-      </Grid>
-      <Grid
-        container
-        direction="row"
-        justify="space-around"
-        style={{ marginTop: 0 }}
-        className={classes.rowContainer}
-      >
+        <Grid item container justify="center" className={classes.rowContainer}>
+          <Typography variant="h4" align="center" className={classes.statement}>
+            Whether it be person, business to consumer, or an individual to
+            their interests, technology is meant to bring us closer to what we
+            care about in the best way possible. beri.dev will use that
+            principle to provide fast, modern inexpensive and aesthetic software
+            to the Prairies and beyond.
+          </Typography>
+        </Grid>
         <Grid
-          item
           container
-          direction="column"
-          className={classes.teamCardContainer}
-          lg
+          direction="row"
+          alignItems="center"
+          justify="center"
+          className={classes.rowContainer}
         >
-          <Grid item align="center">
-            <Avatar
-              src="assets/founder2.jpeg"
-              className={classes.avatar}
-              alt="founder's headshot"
-            />
+          {medium ? historyJSX : null}
+          <Grid
+            item
+            container
+            direction="column"
+            alignItems={smaller ? "center" : "flex-start"}
+            style={{
+              marginLeft: 0,
+              marginRight: medium ? 0 : larger ? "2.5em" : "5em",
+            }}
+            className={classes.itemContainer}
+            lg
+          >
+            <Grid item align={smaller ? "center" : "left"}>
+              <Typography variant="h4" gutterBottom>
+                History
+              </Typography>
+            </Grid>
+            <Grid item style={{ textAlign: smallest ? "center" : "justify" }}>
+              <Typography variant="body1" paragraph>
+                We’re the new kid on the block.
+              </Typography>
+              <Typography variant="body1" paragraph>
+                Founded in 2019, we’re ready to get our hands on the world’s
+                business problems.
+              </Typography>
+              <Typography variant="body1" paragraph>
+                It all started with one question: Why aren’t all businesses
+                using available technology? There are many different answers to
+                that question: economic barriers, social barriers, educational
+                barriers, and sometimes institutional barriers.
+              </Typography>
+              <Typography variant="body1" paragraph>
+                We aim to be a powerful force in overcoming these obstacles.
+                Recent developments in software engineering and computing power,
+                compounded by the proliferation of smart phones, has opened up
+                infinite worlds of possibility. Things that have always been
+                done by hand can now be done digitally and automatically, and
+                completely new methods of interaction are created daily. Taking
+                full advantage of these advancements is the name of the game.
+              </Typography>
+              <Typography variant="body1" paragraph>
+                All this change can be a lot to keep up with, and that’s where
+                we come in.
+              </Typography>
+            </Grid>
           </Grid>
-          <Grid item style={{ marginTop: "2rem", textAlign: "center" }}>
-            <Typography variant="h4">Khubaib Zuberi</Typography>
-            <Typography variant="caption" gutterBottom>
-              Founder
-            </Typography>
+          {medium ? null : historyJSX}
+        </Grid>
+        <Grid item className={classes.heading} align="center">
+          <Typography variant="h3">Team</Typography>
+        </Grid>
+        <Grid
+          container
+          direction="row"
+          justify="space-around"
+          style={{ marginTop: 0 }}
+          className={classes.rowContainer}
+        >
+          <Grid
+            item
+            container
+            direction="column"
+            className={classes.teamCardContainer}
+            lg
+          >
+            <Grid item align="center">
+              <Avatar
+                src="assets/founder2.jpeg"
+                className={classes.avatar}
+                alt="founder's headshot"
+              />
+            </Grid>
+            <Grid item style={{ marginTop: "2rem", textAlign: "center" }}>
+              <Typography variant="h4">Khubaib Zuberi</Typography>
+              <Typography variant="caption" gutterBottom>
+                Founder
+              </Typography>
+            </Grid>
+            <Grid
+              item
+              style={{
+                maxWidth: "100%",
+                marginTop: "1.5rem",
+                textAlign: smallest ? "center " : "justify",
+              }}
+            >
+              <Typography variant="body1" paragraph>
+                I taught myself basic coding from a library book in third grade,
+                and ever since then my passion has solely been set on learning —
+                learning about computers, learning mathematics and philosophy,
+                studying design, always just learning.
+              </Typography>
+              <Typography variant="body1" paragraph>
+                Now I’m ready to apply everything I’ve learned, and to help
+                others with the intuition I have developed.
+              </Typography>
+            </Grid>
           </Grid>
           <Grid
             item
-            style={{
-              maxWidth: "100%",
-              marginTop: "1.5rem",
-              textAlign: smallest ? "center " : "justify",
-            }}
+            container
+            direction="column"
+            className={classes.teamCardContainer}
+            lg
           >
-            <Typography variant="body1" paragraph>
-              I taught myself basic coding from a library book in third grade,
-              and ever since then my passion has solely been set on learning —
-              learning about computers, learning mathematics and philosophy,
-              studying design, always just learning.
-            </Typography>
-            <Typography variant="body1" paragraph>
-              Now I’m ready to apply everything I’ve learned, and to help others
-              with the intuition I have developed.
-            </Typography>
-          </Grid>
-        </Grid>
-        <Grid
-          item
-          container
-          direction="column"
-          className={classes.teamCardContainer}
-          lg
-        >
-          <Grid item align="center">
-            <Avatar
-              src="assets/founder.jpg"
-              className={classes.avatar}
-              alt="founder's headshot"
-            />
-          </Grid>
-          <Grid item style={{ marginTop: "2rem", textAlign: "center" }}>
-            <Typography variant="h4">Hassaan Zuberi</Typography>
-            <Typography variant="caption" gutterBottom>
-              Founder
-            </Typography>
+            <Grid item align="center">
+              <Avatar
+                src="assets/founder.jpg"
+                className={classes.avatar}
+                alt="founder's headshot"
+              />
+            </Grid>
+            <Grid item style={{ marginTop: "2rem", textAlign: "center" }}>
+              <Typography variant="h4">Hassaan Zuberi</Typography>
+              <Typography variant="caption" gutterBottom>
+                Founder
+              </Typography>
+            </Grid>
+            <Grid
+              item
+              style={{
+                maxWidth: "100%",
+                marginTop: "1.5rem",
+                textAlign: smallest ? "center " : "justify",
+              }}
+            >
+              <Typography variant="body1" paragraph>
+                I taught myself basic coding from a library book in third grade,
+                and ever since then my passion has solely been set on learning —
+                learning about computers, learning mathematics and philosophy,
+                studying design, always just learning.
+              </Typography>
+              <Typography variant="body1" paragraph>
+                Now I’m ready to apply everything I’ve learned, and to help
+                others with the intuition I have developed.
+              </Typography>
+            </Grid>
           </Grid>
           <Grid
             item
-            style={{
-              maxWidth: "100%",
-              marginTop: "1.5rem",
-              textAlign: smallest ? "center " : "justify",
-            }}
+            container
+            direction="column"
+            className={classes.teamCardContainer}
+            lg
           >
-            <Typography variant="body1" paragraph>
-              I taught myself basic coding from a library book in third grade,
-              and ever since then my passion has solely been set on learning —
-              learning about computers, learning mathematics and philosophy,
-              studying design, always just learning.
-            </Typography>
-            <Typography variant="body1" paragraph>
-              Now I’m ready to apply everything I’ve learned, and to help others
-              with the intuition I have developed.
-            </Typography>
+            <Grid item align="center">
+              <Avatar
+                src="assets/founder3.jpg"
+                className={classes.avatar}
+                alt="founder's headshot"
+              />
+            </Grid>
+            <Grid item style={{ marginTop: "2rem", textAlign: "center" }}>
+              <Typography variant="h4">Muzaina Zuberi</Typography>
+              <Typography variant="caption" gutterBottom>
+                Founder
+              </Typography>
+            </Grid>
+            <Grid
+              item
+              style={{
+                maxWidth: "100%",
+                marginTop: "1.5rem",
+                textAlign: smallest ? "center " : "justify",
+              }}
+            >
+              <Typography variant="body1" paragraph>
+                I taught myself basic coding from a library book in third grade,
+                and ever since then my passion has solely been set on learning —
+                learning about computers, learning mathematics and philosophy,
+                studying design, always just learning.
+              </Typography>
+              <Typography variant="body1" paragraph>
+                Now I’m ready to apply everything I’ve learned, and to help
+                others with the intuition I have developed.
+              </Typography>
+            </Grid>
           </Grid>
         </Grid>
-        <Grid
-          item
-          container
-          direction="column"
-          className={classes.teamCardContainer}
-          lg
-        >
-          <Grid item align="center">
-            <Avatar
-              src="assets/founder3.jpg"
-              className={classes.avatar}
-              alt="founder's headshot"
-            />
-          </Grid>
-          <Grid item style={{ marginTop: "2rem", textAlign: "center" }}>
-            <Typography variant="h4">Muzaina Zuberi</Typography>
-            <Typography variant="caption" gutterBottom>
-              Founder
-            </Typography>
-          </Grid>
-          <Grid
-            item
-            style={{
-              maxWidth: "100%",
-              marginTop: "1.5rem",
-              textAlign: smallest ? "center " : "justify",
-            }}
-          >
-            <Typography variant="body1" paragraph>
-              I taught myself basic coding from a library book in third grade,
-              and ever since then my passion has solely been set on learning —
-              learning about computers, learning mathematics and philosophy,
-              studying design, always just learning.
-            </Typography>
-            <Typography variant="body1" paragraph>
-              Now I’m ready to apply everything I’ve learned, and to help others
-              with the intuition I have developed.
-            </Typography>
-          </Grid>
-        </Grid>
-      </Grid>
-      <Grid item>
-        {/* Call to Action Block */}
-        {/* HINT: a background image can be set directly on the Grid Container
+        <Grid item>
+          {/* Call to Action Block */}
+          {/* HINT: a background image can be set directly on the Grid Container
                 as className Prop and then we dont need to set the inner container with
                 absolute positioning
             */}
-        <CallToAction
-          setValue={props.setValue}
-          setSelected={props.setSelected}
-        />
+          <CallToAction
+            setValue={props.setValue}
+            setSelected={props.setSelected}
+          />
+        </Grid>
       </Grid>
-    </Grid>
+    </>
   );
 };
 

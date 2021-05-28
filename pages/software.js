@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import Link from "../src/Link.js";
 import Lottie from "react-lottie";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
@@ -148,338 +149,343 @@ const Software = (props) => {
     </Grid>
   );
   return (
-    <Grid container direction="column">
-      <Grid
-        item
-        container
-        direction="row"
-        justify={medium ? "space-around" : "center"}
-        className={classes.rowContainer}
-        style={{
-          marginTop: medium ? "1rem" : "2rem",
-        }}
-      >
-        <Hidden smDown>
-          <Grid
-            item
-            className={classes.arrowContainer}
-            style={{
-              marginRight: medium ? "1rem" : "2.5em",
-              marginLeft: medium ? "-1.5rem" : "-2.5em",
-            }}
-          >
-            <IconButton
-              className={classes.arrowIcons}
-              component={Link}
-              href="/services"
-              onClick={() => {
-                props.setValue(1);
-                props.setSelected(null);
+    <>
+      <Head>
+        <title>Custom Software Development Services | beri.dev</title>
+      </Head>
+      <Grid container direction="column">
+        <Grid
+          item
+          container
+          direction="row"
+          justify={medium ? "space-around" : "center"}
+          className={classes.rowContainer}
+          style={{
+            marginTop: medium ? "1rem" : "2rem",
+          }}
+        >
+          <Hidden smDown>
+            <Grid
+              item
+              className={classes.arrowContainer}
+              style={{
+                marginRight: medium ? "1rem" : "2.5em",
+                marginLeft: medium ? "-1.5rem" : "-2.5em",
               }}
             >
-              <img src="/assets/backArrow.svg" alt="Back to Services Page" />
-            </IconButton>
+              <IconButton
+                className={classes.arrowIcons}
+                component={Link}
+                href="/services"
+                onClick={() => {
+                  props.setValue(1);
+                  props.setSelected(null);
+                }}
+              >
+                <img src="/assets/backArrow.svg" alt="Back to Services Page" />
+              </IconButton>
+            </Grid>
+          </Hidden>
+          <Grid item container direction="column" className={classes.heading}>
+            <Grid item>
+              <Typography
+                variant="h2"
+                align={smaller ? "center" : "left"}
+                gutterBottom
+              >
+                Software Development
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Typography variant="body1" paragraph>
+                Whether we’re replacing old software or inventing new solutions,
+                our experts are here to help your business tackle technology.
+              </Typography>
+              <Typography variant="body1" paragraph>
+                Using regular commercial software leaves you with a lot of stuff
+                you don’t need, without some of the stuff you do need, and
+                ultimately controls the way you work. Without using any software
+                at all you risk falling behind competitors and missing out on
+                huge savings from increased efficiency.
+              </Typography>
+              <Typography variant="body1" paragraph>
+                Our custom solutions are designed from the ground up with your
+                needs, wants, and goals at the core. This collaborative process
+                produces finely tuned software that is much more effective at
+                improving your workflow and reducing costs than generalized
+                options.
+              </Typography>
+              <Typography variant="body1" paragraph>
+                We create exactly what you want, exactly how you want it.
+              </Typography>
+            </Grid>
           </Grid>
-        </Hidden>
-        <Grid item container direction="column" className={classes.heading}>
-          <Grid item>
-            <Typography
-              variant="h2"
-              align={smaller ? "center" : "left"}
-              gutterBottom
+          <Hidden smDown>
+            <Grid
+              item
+              className={classes.arrowContainer}
+              style={{ marginRight: medium ? "-1.5rem" : 0 }}
             >
-              Software Development
-            </Typography>
+              <IconButton
+                className={classes.arrowIcons}
+                component={Link}
+                href="/mobileapps"
+                onClick={() => {
+                  props.setValue(1);
+                  props.setSelected(1);
+                }}
+              >
+                <img
+                  src="/assets/forwardArrow.svg"
+                  alt="Forward to App Development Page"
+                />
+              </IconButton>
+            </Grid>
+          </Hidden>
+        </Grid>
+        <Grid
+          item
+          container
+          direction={smallest ? "column" : "row"}
+          alignItems={smallest ? "center" : undefined}
+          style={{ marginTop: "-5em" }}
+          justify="center"
+          className={classes.rowContainer}
+        >
+          <Grid
+            item
+            container
+            md
+            direction="column"
+            alignItems="center"
+            style={{ maxWidth: smaller ? "13em" : "40em", marginTop: "5em" }}
+          >
+            <Grid item>
+              <img src="/assets/stopwatch.svg" alt="stopWatch icon" />
+            </Grid>
+            <Grid item>
+              <Typography variant="h4">Save Time</Typography>
+            </Grid>
           </Grid>
-          <Grid item>
-            <Typography variant="body1" paragraph>
-              Whether we’re replacing old software or inventing new solutions,
-              our experts are here to help your business tackle technology.
-            </Typography>
-            <Typography variant="body1" paragraph>
-              Using regular commercial software leaves you with a lot of stuff
-              you don’t need, without some of the stuff you do need, and
-              ultimately controls the way you work. Without using any software
-              at all you risk falling behind competitors and missing out on huge
-              savings from increased efficiency.
-            </Typography>
-            <Typography variant="body1" paragraph>
-              Our custom solutions are designed from the ground up with your
-              needs, wants, and goals at the core. This collaborative process
-              produces finely tuned software that is much more effective at
-              improving your workflow and reducing costs than generalized
-              options.
-            </Typography>
-            <Typography variant="body1" paragraph>
-              We create exactly what you want, exactly how you want it.
-            </Typography>
+          <Grid
+            item
+            container
+            md
+            direction="column"
+            alignItems="center"
+            style={{ maxWidth: smaller ? "13em" : "40em", marginTop: "5em" }}
+          >
+            <Grid item>
+              <img src="/assets/bulb.svg" alt="lightbulb icon" />
+            </Grid>
+            <Grid item>
+              <Typography variant="h4">Save Energy</Typography>
+            </Grid>
+          </Grid>
+          <Grid
+            item
+            container
+            md
+            direction="column"
+            alignItems="center"
+            style={{ maxWidth: smaller ? "13em" : "40em", marginTop: "5em" }}
+          >
+            <Grid item>
+              <img src="/assets/cash.svg" alt="cash icon" />
+            </Grid>
+            <Grid item>
+              <Typography variant="h4">Save Money</Typography>
+            </Grid>
           </Grid>
         </Grid>
-        <Hidden smDown>
+        <Grid
+          item
+          container
+          direction={medium ? "column" : "row"}
+          alignItems={smaller ? "center" : "flex-start"}
+          justify="space-around"
+          className={classes.rowContainer}
+        >
           <Grid
             item
-            className={classes.arrowContainer}
-            style={{ marginRight: medium ? "-1.5rem" : 0 }}
+            container
+            alignItems={smaller ? "center" : "flex-start"}
+            direction={smaller ? "column" : "row"}
+            className={classes.itemContainer}
+            md
           >
-            <IconButton
-              className={classes.arrowIcons}
-              component={Link}
-              href="/mobileapps"
-              onClick={() => {
-                props.setValue(1);
-                props.setSelected(1);
-              }}
+            {medium ? documentsAnimationJSX : null}
+            <Grid item container direction="column" md>
+              <Grid item align={smaller ? "center" : "left"}>
+                <Typography variant="h4" gutterBottom>
+                  Digital Documents & Data
+                </Typography>
+              </Grid>
+              <Grid item align={smaller ? "center" : "left"}>
+                <Typography variant="body1" paragraph>
+                  Reduce Errors. Reduce Waste. Reduce Costs.
+                </Typography>
+                <Typography variant="body1" paragraph>
+                  Billions are spent annually on the purchasing, printing, and
+                  distribution of paper. On top of the massive environmental
+                  impact this has, it causes harm to your bottom line as well.
+                </Typography>
+                <Typography variant="body1" paragraph>
+                  By utilizing digital forms and documents you can remove these
+                  obsolete expenses, accelerate your communication, and help the
+                  Earth.
+                </Typography>
+              </Grid>
+            </Grid>
+            {medium ? null : documentsAnimationJSX}
+          </Grid>
+          <Grid
+            item
+            container
+            alignItems={medium ? "center" : smaller ? "center" : "flex-start"}
+            direction={smaller ? "column" : "row"}
+            className={classes.itemContainer}
+            style={{ marginBottom: 0 }}
+            md
+          >
+            {medium ? (smaller ? scaleAnimationJSX : null) : scaleAnimationJSX}
+            <Grid
+              item
+              container
+              alignItems={smaller ? "center" : "flex-end"}
+              direction="column"
+              md
             >
+              <Grid item align={smaller ? "center" : "right"}>
+                <Typography variant="h4" gutterBottom>
+                  Scale
+                </Typography>
+              </Grid>
+              <Grid item align={smaller ? "center" : "right"}>
+                <Typography variant="body1" paragraph>
+                  Whether you’re a large brand, just getting started, or taking
+                  off right now, our application architecture ensures pain-free
+                  growth and reliability.
+                </Typography>
+              </Grid>
+            </Grid>
+            {medium ? (smaller ? null : scaleAnimationJSX) : null}
+          </Grid>
+        </Grid>
+        <Grid item className={classes.rowContainer} container direction="row">
+          <Grid item container direction="column" alignItems="center">
+            <Grid item style={{ marginBottom: "1rem" }}>
               <img
-                src="/assets/forwardArrow.svg"
-                alt="Forward to App Development Page"
+                src="/assets/root.svg"
+                alt="a tree with roots"
+                height={smallest ? "300em" : "400em"}
+                width={smallest ? "300em" : "400em"}
               />
-            </IconButton>
-          </Grid>
-        </Hidden>
-      </Grid>
-      <Grid
-        item
-        container
-        direction={smallest ? "column" : "row"}
-        alignItems={smallest ? "center" : undefined}
-        style={{ marginTop: "-5em" }}
-        justify="center"
-        className={classes.rowContainer}
-      >
-        <Grid
-          item
-          container
-          md
-          direction="column"
-          alignItems="center"
-          style={{ maxWidth: smaller ? "13em" : "40em", marginTop: "5em" }}
-        >
-          <Grid item>
-            <img src="/assets/stopwatch.svg" alt="stopWatch icon" />
-          </Grid>
-          <Grid item>
-            <Typography variant="h4">Save Time</Typography>
+            </Grid>
+            <Grid item>
+              <Typography variant="h4" align="center" gutterBottom>
+                Root-Cause Analysis
+              </Typography>
+            </Grid>
+            <Grid item className={classes.heading} align="center">
+              <Typography variant="body1" gutterBottom>
+                Many problems are merely symptoms of larger, underlying issues.
+              </Typography>
+              <Typography variant="body1" gutterBottom>
+                We can help you thoroughly examine all areas of your business to
+                develop a holistic plan for the most effective implementation of
+                technology.
+              </Typography>
+            </Grid>
           </Grid>
         </Grid>
         <Grid
           item
           container
-          md
-          direction="column"
-          alignItems="center"
-          style={{ maxWidth: smaller ? "13em" : "40em", marginTop: "5em" }}
-        >
-          <Grid item>
-            <img src="/assets/bulb.svg" alt="lightbulb icon" />
-          </Grid>
-          <Grid item>
-            <Typography variant="h4">Save Energy</Typography>
-          </Grid>
-        </Grid>
-        <Grid
-          item
-          container
-          md
-          direction="column"
-          alignItems="center"
-          style={{ maxWidth: smaller ? "13em" : "40em", marginTop: "5em" }}
-        >
-          <Grid item>
-            <img src="/assets/cash.svg" alt="cash icon" />
-          </Grid>
-          <Grid item>
-            <Typography variant="h4">Save Money</Typography>
-          </Grid>
-        </Grid>
-      </Grid>
-      <Grid
-        item
-        container
-        direction={medium ? "column" : "row"}
-        alignItems={smaller ? "center" : "flex-start"}
-        justify="space-around"
-        className={classes.rowContainer}
-      >
-        <Grid
-          item
-          container
+          className={classes.rowContainer}
+          direction={medium ? "column" : "row"}
           alignItems={smaller ? "center" : "flex-start"}
-          direction={smaller ? "column" : "row"}
-          className={classes.itemContainer}
-          md
+          justify="space-around"
         >
-          {medium ? documentsAnimationJSX : null}
-          <Grid item container direction="column" md>
-            <Grid item align={smaller ? "center" : "left"}>
-              <Typography variant="h4" gutterBottom>
-                Digital Documents & Data
-              </Typography>
-            </Grid>
-            <Grid item align={smaller ? "center" : "left"}>
-              <Typography variant="body1" paragraph>
-                Reduce Errors. Reduce Waste. Reduce Costs.
-              </Typography>
-              <Typography variant="body1" paragraph>
-                Billions are spent annually on the purchasing, printing, and
-                distribution of paper. On top of the massive environmental
-                impact this has, it causes harm to your bottom line as well.
-              </Typography>
-              <Typography variant="body1" paragraph>
-                By utilizing digital forms and documents you can remove these
-                obsolete expenses, accelerate your communication, and help the
-                Earth.
-              </Typography>
-            </Grid>
-          </Grid>
-          {medium ? null : documentsAnimationJSX}
-        </Grid>
-        <Grid
-          item
-          container
-          alignItems={medium ? "center" : smaller ? "center" : "flex-start"}
-          direction={smaller ? "column" : "row"}
-          className={classes.itemContainer}
-          style={{ marginBottom: 0 }}
-          md
-        >
-          {medium ? (smaller ? scaleAnimationJSX : null) : scaleAnimationJSX}
           <Grid
             item
             container
-            alignItems={smaller ? "center" : "flex-end"}
-            direction="column"
+            alignItems={smaller ? "center" : "flex-start"}
+            direction={smaller ? "column" : "row"}
+            className={classes.itemContainer}
             md
           >
-            <Grid item align={smaller ? "center" : "right"}>
-              <Typography variant="h4" gutterBottom>
-                Scale
-              </Typography>
+            {medium ? automationAnimationJSX : null}
+            <Grid item container direction="column" md>
+              <Grid item align={smaller ? "center" : "left"}>
+                <Typography variant="h4">Automation</Typography>
+              </Grid>
+              <Grid item align={smaller ? "center" : "left"}>
+                <Typography variant="body1" paragraph>
+                  Why waste time when you don’t have to?
+                </Typography>
+                <Typography variant="body1" paragraph>
+                  We can help you identify processes with time or event based
+                  actions which can now easily be automated.
+                </Typography>
+                <Typography variant="body1" paragraph>
+                  Increasing efficiency increases profits, leaving you more time
+                  to focus on your business, not busywork.
+                </Typography>
+              </Grid>
             </Grid>
-            <Grid item align={smaller ? "center" : "right"}>
-              <Typography variant="body1" paragraph>
-                Whether you’re a large brand, just getting started, or taking
-                off right now, our application architecture ensures pain-free
-                growth and reliability.
-              </Typography>
-            </Grid>
+            {medium ? null : automationAnimationJSX}
           </Grid>
-          {medium ? (smaller ? null : scaleAnimationJSX) : null}
-        </Grid>
-      </Grid>
-      <Grid item className={classes.rowContainer} container direction="row">
-        <Grid item container direction="column" alignItems="center">
-          <Grid item style={{ marginBottom: "1rem" }}>
-            <img
-              src="/assets/root.svg"
-              alt="a tree with roots"
-              height={smallest ? "300em" : "400em"}
-              width={smallest ? "300em" : "400em"}
-            />
-          </Grid>
-          <Grid item>
-            <Typography variant="h4" align="center" gutterBottom>
-              Root-Cause Analysis
-            </Typography>
-          </Grid>
-          <Grid item className={classes.heading} align="center">
-            <Typography variant="body1" gutterBottom>
-              Many problems are merely symptoms of larger, underlying issues.
-            </Typography>
-            <Typography variant="body1" gutterBottom>
-              We can help you thoroughly examine all areas of your business to
-              develop a holistic plan for the most effective implementation of
-              technology.
-            </Typography>
-          </Grid>
-        </Grid>
-      </Grid>
-      <Grid
-        item
-        container
-        className={classes.rowContainer}
-        direction={medium ? "column" : "row"}
-        alignItems={smaller ? "center" : "flex-start"}
-        justify="space-around"
-      >
-        <Grid
-          item
-          container
-          alignItems={smaller ? "center" : "flex-start"}
-          direction={smaller ? "column" : "row"}
-          className={classes.itemContainer}
-          md
-        >
-          {medium ? automationAnimationJSX : null}
-          <Grid item container direction="column" md>
-            <Grid item align={smaller ? "center" : "left"}>
-              <Typography variant="h4">Automation</Typography>
-            </Grid>
-            <Grid item align={smaller ? "center" : "left"}>
-              <Typography variant="body1" paragraph>
-                Why waste time when you don’t have to?
-              </Typography>
-              <Typography variant="body1" paragraph>
-                We can help you identify processes with time or event based
-                actions which can now easily be automated.
-              </Typography>
-              <Typography variant="body1" paragraph>
-                Increasing efficiency increases profits, leaving you more time
-                to focus on your business, not busywork.
-              </Typography>
-            </Grid>
-          </Grid>
-          {medium ? null : automationAnimationJSX}
-        </Grid>
-        <Grid
-          item
-          container
-          alignItems={smaller ? "center" : "flex-start"}
-          direction={smaller ? "column" : "row"}
-          className={classes.itemContainer}
-          md
-        >
-          {medium ? (smaller ? uxAnimationJSX : null) : uxAnimationJSX}
           <Grid
             item
             container
-            alignItems={smaller ? "center" : "flex-end"}
-            direction="column"
+            alignItems={smaller ? "center" : "flex-start"}
+            direction={smaller ? "column" : "row"}
+            className={classes.itemContainer}
             md
           >
-            <Grid item align={smaller ? "center" : "right"}>
-              <Typography variant="h4">User Experience Design</Typography>
+            {medium ? (smaller ? uxAnimationJSX : null) : uxAnimationJSX}
+            <Grid
+              item
+              container
+              alignItems={smaller ? "center" : "flex-end"}
+              direction="column"
+              md
+            >
+              <Grid item align={smaller ? "center" : "right"}>
+                <Typography variant="h4">User Experience Design</Typography>
+              </Grid>
+              <Grid item align={smaller ? "center" : "right"}>
+                <Typography variant="body1" paragraph>
+                  A good design that isn’t usable isn’t a good design.
+                </Typography>
+                <Typography variant="body1" paragraph>
+                  So why are so many pieces of software complicated, confusing,
+                  and frustrating?
+                </Typography>
+                <Typography variant="body1" paragraph>
+                  By prioritizing users and the real ways they interact with
+                  technology we’re able to develop unique, personable
+                  experiences that solve problems rather than create new ones.
+                </Typography>
+              </Grid>
             </Grid>
-            <Grid item align={smaller ? "center" : "right"}>
-              <Typography variant="body1" paragraph>
-                A good design that isn’t usable isn’t a good design.
-              </Typography>
-              <Typography variant="body1" paragraph>
-                So why are so many pieces of software complicated, confusing,
-                and frustrating?
-              </Typography>
-              <Typography variant="body1" paragraph>
-                By prioritizing users and the real ways they interact with
-                technology we’re able to develop unique, personable experiences
-                that solve problems rather than create new ones.
-              </Typography>
-            </Grid>
+            {medium ? (smaller ? null : uxAnimationJSX) : null}
           </Grid>
-          {medium ? (smaller ? null : uxAnimationJSX) : null}
         </Grid>
-      </Grid>
-      <Grid item>
-        {/* Call to Action Block */}
-        {/* HINT: a background image can be set directly on the Grid Container
+        <Grid item>
+          {/* Call to Action Block */}
+          {/* HINT: a background image can be set directly on the Grid Container
             as className Prop and then we dont need to set the inner container with
             absolute positioning
           */}
-        <CallToAction
-          setValue={props.setValue}
-          setSelected={props.setSelected}
-        />
+          <CallToAction
+            setValue={props.setValue}
+            setSelected={props.setSelected}
+          />
+        </Grid>
       </Grid>
-    </Grid>
+    </>
   );
 };
 

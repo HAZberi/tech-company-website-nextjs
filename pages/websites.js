@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "head/next";
 import Link from "../src/Link.js";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
@@ -50,240 +51,245 @@ const Websites = (props) => {
   const smaller = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <Grid container direction="column">
-      <Grid
-        item
-        container
-        direction="row"
-        className={classes.rowContainer}
-        justify={medium ? "space-around" : "center"}
-        style={{
-          marginTop: medium ? "1rem" : "2rem",
-        }}
-      >
-        <Hidden smDown>
-          <Grid
-            item
-            className={classes.arrowContainer}
-            style={{
-              marginRight: medium ? "1rem" : "2.5em",
-              marginLeft: medium ? "-1.5rem" : "-2.5em",
-            }}
-          >
-            <IconButton
-              className={classes.arrowIcons}
-              component={Link}
-              href="/mobileapps"
-              onClick={() => {
-                props.setValue(1);
-                props.setSelected(1);
+    <>
+      <Head>
+        <title>Custom Website Development and Design | beri.dev</title>
+      </Head>
+      <Grid container direction="column">
+        <Grid
+          item
+          container
+          direction="row"
+          className={classes.rowContainer}
+          justify={medium ? "space-around" : "center"}
+          style={{
+            marginTop: medium ? "1rem" : "2rem",
+          }}
+        >
+          <Hidden smDown>
+            <Grid
+              item
+              className={classes.arrowContainer}
+              style={{
+                marginRight: medium ? "1rem" : "2.5em",
+                marginLeft: medium ? "-1.5rem" : "-2.5em",
               }}
             >
-              <img
-                src="/assets/backArrow.svg"
-                alt="Back to Mobile App Development Page"
-              />
-            </IconButton>
+              <IconButton
+                className={classes.arrowIcons}
+                component={Link}
+                href="/mobileapps"
+                onClick={() => {
+                  props.setValue(1);
+                  props.setSelected(1);
+                }}
+              >
+                <img
+                  src="/assets/backArrow.svg"
+                  alt="Back to Mobile App Development Page"
+                />
+              </IconButton>
+            </Grid>
+          </Hidden>
+          <Grid item container direction="column" className={classes.heading}>
+            <Grid item>
+              <Typography
+                variant="h2"
+                align={smaller ? "center" : "left"}
+                gutterBottom
+              >
+                Webiste Development
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Typography variant="body1" paragraph>
+                Having a website is a necessity in today’s business world. They
+                give you one central, public location to let people know who you
+                are, what you do, and why you’re the best at it.
+              </Typography>
+              <Typography variant="body1" paragraph>
+                From simply having your hours posted to having a full fledged
+                online store, making yourself as accessible as possible to users
+                online drives growth and enables you to reach new customers.
+              </Typography>
+            </Grid>
           </Grid>
-        </Hidden>
-        <Grid item container direction="column" className={classes.heading}>
-          <Grid item>
-            <Typography
-              variant="h2"
-              align={smaller ? "center" : "left"}
-              gutterBottom
+          <Hidden smDown>
+            <Grid
+              item
+              className={classes.arrowContainer}
+              style={{ marginRight: medium ? "-1.5rem" : 0 }}
             >
-              Webiste Development
-            </Typography>
-          </Grid>
+              <IconButton
+                className={classes.arrowIcons}
+                component={Link}
+                href="/services"
+                onClick={() => {
+                  props.setValue(1);
+                  props.setSelected(null);
+                }}
+              >
+                <img
+                  src="/assets/forwardArrow.svg"
+                  alt="Forward to Services Page"
+                />
+              </IconButton>
+            </Grid>
+          </Hidden>
+        </Grid>
+        <Grid
+          item
+          container
+          direction="row"
+          alignItems="center"
+          justify={smaller ? "center" : "flex-start"}
+          className={classes.rowContainer}
+        >
           <Grid item>
-            <Typography variant="body1" paragraph>
-              Having a website is a necessity in today’s business world. They
-              give you one central, public location to let people know who you
-              are, what you do, and why you’re the best at it.
-            </Typography>
-            <Typography variant="body1" paragraph>
-              From simply having your hours posted to having a full fledged
-              online store, making yourself as accessible as possible to users
-              online drives growth and enables you to reach new customers.
-            </Typography>
+            <img
+              src="/assets/analytics.svg"
+              style={{ maxWidth: medium ? 255 : "100%" }}
+              alt="graph with magnifying glass"
+            />
           </Grid>
-        </Grid>
-        <Hidden smDown>
-          <Grid
-            item
-            className={classes.arrowContainer}
-            style={{ marginRight: medium ? "-1.5rem" : 0 }}
-          >
-            <IconButton
-              className={classes.arrowIcons}
-              component={Link}
-              href="/services"
-              onClick={() => {
-                props.setValue(1);
-                props.setSelected(null);
-              }}
-            >
-              <img
-                src="/assets/forwardArrow.svg"
-                alt="Forward to Services Page"
-              />
-            </IconButton>
-          </Grid>
-        </Hidden>
-      </Grid>
-      <Grid
-        item
-        container
-        direction="row"
-        alignItems="center"
-        justify={smaller ? "center" : "flex-start"}
-        className={classes.rowContainer}
-      >
-        <Grid item>
-          <img
-            src="/assets/analytics.svg"
-            style={{ maxWidth: medium ? 255 : "100%" }}
-            alt="graph with magnifying glass"
-          />
-        </Grid>
-        <Grid item className={classes.itemContainer}>
-          <Grid container direction="column">
-            <Grid item align={smaller ? "center" : "left"}>
-              <Typography variant="h4" gutterBottom>
-                Analytics
-              </Typography>
-            </Grid>
-            <Grid item align={smaller ? "center" : "left"}>
-              <Typography variant="body1" paragraph>
-                Knowledge is power, and data is 21st Century gold. Analyzing
-                this data can reveal hidden patterns and trends in your
-                business, empowering you to make smarter decisions with
-                measurable effects.
-              </Typography>
+          <Grid item className={classes.itemContainer}>
+            <Grid container direction="column">
+              <Grid item align={smaller ? "center" : "left"}>
+                <Typography variant="h4" gutterBottom>
+                  Analytics
+                </Typography>
+              </Grid>
+              <Grid item align={smaller ? "center" : "left"}>
+                <Typography variant="body1" paragraph>
+                  Knowledge is power, and data is 21st Century gold. Analyzing
+                  this data can reveal hidden patterns and trends in your
+                  business, empowering you to make smarter decisions with
+                  measurable effects.
+                </Typography>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
-      </Grid>
-      <Grid
-        item
-        container
-        direction="row"
-        alignItems="center"
-        justify={smaller ? "center" : "flex-end"}
-        className={classes.rowContainer}
-      >
-        <Grid item>
-          <img
-            src="/assets/ecommerce.svg"
-            style={{ maxWidth: medium ? 255 : "100%" }}
-            alt="graph with magnifying glass"
-          />
-        </Grid>
-        <Grid item className={classes.itemContainer}>
-          <Grid container direction="column">
-            <Grid item align={smaller ? "center" : "left"}>
-              <Typography variant="h4" gutterBottom>
-                E-Commerce
-              </Typography>
-            </Grid>
-            <Grid item align={smaller ? "center" : "left"}>
-              <Typography variant="body1" paragraph>
-                It’s no secret that people like to shop online.
-              </Typography>
-              <Typography variant="body1" paragraph>
-                In 2017 over $2.3 trillion was spent in e-commerce, and it’s
-                time for your slice of that pie.
-              </Typography>
+        <Grid
+          item
+          container
+          direction="row"
+          alignItems="center"
+          justify={smaller ? "center" : "flex-end"}
+          className={classes.rowContainer}
+        >
+          <Grid item>
+            <img
+              src="/assets/ecommerce.svg"
+              style={{ maxWidth: medium ? 255 : "100%" }}
+              alt="graph with magnifying glass"
+            />
+          </Grid>
+          <Grid item className={classes.itemContainer}>
+            <Grid container direction="column">
+              <Grid item align={smaller ? "center" : "left"}>
+                <Typography variant="h4" gutterBottom>
+                  E-Commerce
+                </Typography>
+              </Grid>
+              <Grid item align={smaller ? "center" : "left"}>
+                <Typography variant="body1" paragraph>
+                  It’s no secret that people like to shop online.
+                </Typography>
+                <Typography variant="body1" paragraph>
+                  In 2017 over $2.3 trillion was spent in e-commerce, and it’s
+                  time for your slice of that pie.
+                </Typography>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
-      </Grid>
-      <Grid
-        item
-        container
-        direction="row"
-        alignItems="center"
-        justify={smaller ? "center" : "flex-start"}
-        className={classes.rowContainer}
-      >
-        <Grid item>
-          <img
-            src="/assets/outreach.svg"
-            style={{ maxWidth: medium ? 255 : "100%" }}
-            alt="graph with magnifying glass"
-          />
-        </Grid>
-        <Grid item className={classes.itemContainer}>
-          <Grid container direction="column">
-            <Grid item align={smaller ? "center" : "left"}>
-              <Typography variant="h4" gutterBottom>
-                Outreach
-              </Typography>
-            </Grid>
-            <Grid item align={smaller ? "center" : "left"}>
-              <Typography variant="body1" paragraph>
-                Draw people in with a dazzling website. Showing off your
-                products online is a great way to help customers decide what’s
-                right for them before visiting in person.
-              </Typography>
+        <Grid
+          item
+          container
+          direction="row"
+          alignItems="center"
+          justify={smaller ? "center" : "flex-start"}
+          className={classes.rowContainer}
+        >
+          <Grid item>
+            <img
+              src="/assets/outreach.svg"
+              style={{ maxWidth: medium ? 255 : "100%" }}
+              alt="graph with magnifying glass"
+            />
+          </Grid>
+          <Grid item className={classes.itemContainer}>
+            <Grid container direction="column">
+              <Grid item align={smaller ? "center" : "left"}>
+                <Typography variant="h4" gutterBottom>
+                  Outreach
+                </Typography>
+              </Grid>
+              <Grid item align={smaller ? "center" : "left"}>
+                <Typography variant="body1" paragraph>
+                  Draw people in with a dazzling website. Showing off your
+                  products online is a great way to help customers decide what’s
+                  right for them before visiting in person.
+                </Typography>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
-      </Grid>
-      <Grid
-        item
-        container
-        direction="row"
-        alignItems="center"
-        justify={smaller ? "center" : "flex-end"}
-        className={classes.rowContainer}
-      >
-        <Grid item>
-          <img
-            src="/assets/seo.svg"
-            style={{ maxWidth: medium ? 255 : "100%" }}
-            alt="graph with magnifying glass"
-          />
-        </Grid>
-        <Grid item className={classes.itemContainer}>
-          <Grid container direction="column">
-            <Grid item align={smaller ? "center" : "left"}>
-              <Typography variant="h4" gutterBottom>
-                Search Engine
-                <br />
-                Optimization
-              </Typography>
-            </Grid>
-            <Grid item align={smaller ? "center" : "left"}>
-              <Typography variant="body1" paragraph>
-                How often have you ever been to the second page of Google
-                results?
-              </Typography>
-              <Typography variant="body1" paragraph>
-                If you’re like us, probably never.
-              </Typography>
-              <Typography variant="body1" paragraph>
-                Customers don’t go there either, so we make sure your website is
-                designed to end up on top.
-              </Typography>
+        <Grid
+          item
+          container
+          direction="row"
+          alignItems="center"
+          justify={smaller ? "center" : "flex-end"}
+          className={classes.rowContainer}
+        >
+          <Grid item>
+            <img
+              src="/assets/seo.svg"
+              style={{ maxWidth: medium ? 255 : "100%" }}
+              alt="graph with magnifying glass"
+            />
+          </Grid>
+          <Grid item className={classes.itemContainer}>
+            <Grid container direction="column">
+              <Grid item align={smaller ? "center" : "left"}>
+                <Typography variant="h4" gutterBottom>
+                  Search Engine
+                  <br />
+                  Optimization
+                </Typography>
+              </Grid>
+              <Grid item align={smaller ? "center" : "left"}>
+                <Typography variant="body1" paragraph>
+                  How often have you ever been to the second page of Google
+                  results?
+                </Typography>
+                <Typography variant="body1" paragraph>
+                  If you’re like us, probably never.
+                </Typography>
+                <Typography variant="body1" paragraph>
+                  Customers don’t go there either, so we make sure your website
+                  is designed to end up on top.
+                </Typography>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
-      </Grid>
 
-      <Grid item>
-        {/* Call to Action Block */}
-        {/* HINT: a background image can be set directly on the Grid Container
+        <Grid item>
+          {/* Call to Action Block */}
+          {/* HINT: a background image can be set directly on the Grid Container
                 as className Prop and then we dont need to set the inner container with
                 absolute positioning
             */}
-        <CallToAction
-          setValue={props.setValue}
-          setSelected={props.setSelected}
-        />
+          <CallToAction
+            setValue={props.setValue}
+            setSelected={props.setSelected}
+          />
+        </Grid>
       </Grid>
-    </Grid>
+    </>
   );
 };
 
