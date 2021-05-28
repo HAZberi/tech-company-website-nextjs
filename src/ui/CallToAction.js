@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   background: {
-    backgroundImage: url("/assets/background.jps"),
+    backgroundImage: `url("/assets/background.jpg")`,
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     width: "100%",
     [theme.breakpoints.down("sm")]: {
-      backgroundImage: url("/assets/mobileBackground.jpg"),
+      backgroundImage: `url("/assets/mobileBackground.jpg")`,
       //This property removes a parallax effect.
       //backgroundAttachment: "inherit",
     },
