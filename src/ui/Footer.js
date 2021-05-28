@@ -49,11 +49,11 @@ const useStyles = makeStyles((theme) => ({
   link: {
     ...theme.typography.link,
     opacity: 0.7,
-    textDecoration: "none",
     cursor: "pointer",
     whiteSpace: "nowrap",
     "&:hover": {
       opacity: 1,
+      textDecoration: "none",
     },
   },
   icon: {

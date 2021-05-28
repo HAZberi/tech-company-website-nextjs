@@ -61,6 +61,10 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "1.25em",
       marginLeft: "30px",
     },
+    "&:hover": {
+      textDecoration: "none",
+      opacity: 1,
+    }
   },
   button: {
     ...theme.typography.estimate,
