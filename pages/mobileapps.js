@@ -263,7 +263,7 @@ const MobileApps = (props) => {
           <Grid item style={{ marginTop: "2em" }}>
             <img
               style={{ maxWidth: smallest ? 250 : 300 }}
-              src="/assets/extendingAccess.svg"
+              src="/assets/extendAccess.svg"
               alt="extending form options"
             />
           </Grid>
