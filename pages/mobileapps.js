@@ -77,7 +77,12 @@ const MobileApps = (props) => {
   return (
     <>
       <Head>
-        <title>Mobile App Development Services | beri.dev</title>
+        <title key="title">Mobile App Development Services | beri.dev</title>
+        <meta
+          name="description"
+          key="description"
+          content="Mobile Apps Made Easy | Our cutting edge mobile app development process lets us build beautifully designed, carefully crafted apps for both iOS and Android."
+        />
       </Head>
       <Grid container direction="column">
         <Grid

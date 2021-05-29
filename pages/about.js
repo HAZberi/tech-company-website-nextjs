@@ -114,7 +114,12 @@ const About = (props) => {
   return (
     <>
       <Head>
-        <title>About us - Team & History | beri.dev</title>
+        <title key="title">About us - Team & History | beri.dev</title>
+        <meta
+          name="description"
+          key="description"
+          content="Get the fastest, most modern, affordable, and aesthetic software design and development services in Alberta. Get a free estimate now!"
+        />
       </Head>
       <Grid container direction="column">
         <Grid item className={classes.heading}>

@@ -198,7 +198,12 @@ const LandingPage = (props) => {
   return (
     <>
       <Head>
-        <title>Home - Top Technology Services | beri.dev</title>
+        <title key="title">Home - Top Technology Services | beri.dev</title>
+        <meta
+          name="description"
+          key="description"
+          content="Pristine software custom designed from the ground up with cutting edge optimizations. Use our free estimate calculator to check your project cost!"
+        />
       </Head>
       <Grid container direction="column" className={classes.mainContainer}>
         <Grid item>

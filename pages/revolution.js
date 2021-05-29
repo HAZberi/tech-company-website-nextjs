@@ -132,7 +132,7 @@ const Revolution = (props) => {
   return (
     <>
       <Head>
-        <title>Modern Development Revolution | beri.dev</title>
+        <title key="title">Modern Development Revolution | beri.dev</title>
       </Head>
       <Grid container direction="column">
         <Grid item className={classes.heading}>

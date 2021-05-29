@@ -151,7 +151,14 @@ const Software = (props) => {
   return (
     <>
       <Head>
-        <title>Custom Software Development Services | beri.dev</title>
+        <title key="title">
+          Custom Software Development Services | beri.dev
+        </title>
+        <meta
+          name="description"
+          key="description"
+          content="Cutting edge custom software development with gorgeous designs from scratch - let us optimize your business, solving problems instead of creating new ones."
+        />
       </Head>
       <Grid container direction="column">
         <Grid

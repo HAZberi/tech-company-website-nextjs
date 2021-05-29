@@ -53,7 +53,12 @@ const Websites = (props) => {
   return (
     <>
       <Head>
-        <title>Custom Website Development and Design | beri.dev</title>
+        <title key="title">Stunning Custom Website Design | beri.dev</title>
+        <meta
+          name="description"
+          key="description"
+          content="Completely custom designed and built from scratch to be blazing fast. Optimize code, server-side rendering, and perfect responsive design | 99% PageSpeed Score"
+        />
       </Head>
       <Grid container direction="column">
         <Grid

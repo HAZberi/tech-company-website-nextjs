@@ -946,7 +946,12 @@ const Estimate = (props) => {
   return (
     <>
       <Head>
-        <title>Free Estimate | beri.dev</title>
+        <title key="title">Free Estimate | beri.dev</title>
+        <meta
+          name="description"
+          key="description"
+          content="Use our free online estimate calculator to instantly check the cost of your custom software, mobile app, or website design and development project!"
+        />
       </Head>
       <Grid container direction="row" style={{ marginBottom: "10em" }}>
         <Grid item container direction="column" md>

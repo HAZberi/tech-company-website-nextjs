@@ -133,7 +133,7 @@ const Services = (props) => {
   return (
     <>
       <Head>
-        <title>Top Technology Services | beri.dev</title>
+        <title key="title">Top Technology Services | beri.dev</title>
       </Head>
       <Grid container direction="column">
         <Grid

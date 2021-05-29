@@ -193,7 +193,12 @@ const Contact = (props) => {
   return (
     <>
       <Head>
-        <title>Contact Us | beri.dev</title>
+        <title key="title">Contact Us | beri.dev</title>
+        <meta
+          name="description"
+          key="description"
+          content="Let us guide you through the custom software design and development process. Send us a message with any of your ideas or questions to get started!"
+        />
       </Head>
       <Grid container direction="row">
         <Grid
