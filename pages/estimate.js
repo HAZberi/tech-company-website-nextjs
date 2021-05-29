@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import Head from "head/next";
+import Head from "next/head";
 import axios from "axios";
 import Lottie from "react-lottie";
 import { cloneDeep } from "lodash";

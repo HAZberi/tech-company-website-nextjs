@@ -104,7 +104,7 @@ const Footer = (props) => {
   const [homeNavStyles, setHomeNavStyles] = useState({});
 
   useEffect(()=>{
-    if (window.matchMedia("(max-width: 1360px)").matches){
+    if (window.matchMedia("(max-width: 1440px)").matches){
       setHomeNavStyles({display: "none"});
     }else {
       setHomeNavStyles({})
