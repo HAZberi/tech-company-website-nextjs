@@ -134,6 +134,12 @@ const Services = (props) => {
     <>
       <Head>
         <title key="title">Top Technology Services | beri.dev</title>
+        <meta
+          property="og:title"
+          content="Bringing West Coast Technology to Canadian Prairies | Services"
+          key="og:title"
+        />
+        <meta property="og:url" content="" key="og:url" />
       </Head>
       <Grid container direction="column">
         <Grid

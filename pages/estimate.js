@@ -952,6 +952,12 @@ const Estimate = (props) => {
           key="description"
           content="Use our free online estimate calculator to instantly check the cost of your custom software, mobile app, or website design and development project!"
         />
+        <meta
+          property="og:title"
+          content="Bringing West Coast Technology to Canadian Prairies | Free Estimate"
+          key="og:title"
+        />
+        <meta property="og:url" content="" key="og:url" />
       </Head>
       <Grid container direction="row" style={{ marginBottom: "10em" }}>
         <Grid item container direction="column" md>

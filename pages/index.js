@@ -204,6 +204,12 @@ const LandingPage = (props) => {
           key="description"
           content="Pristine software custom designed from the ground up with cutting edge optimizations. Use our free estimate calculator to check your project cost!"
         />
+        <meta
+          property="og:title"
+          content="Bringing West Coast Technology to Canadian Prairies | beri.dev"
+          key="og:title"
+        />
+        <meta property="og:url" content="" key="og:url" />
       </Head>
       <Grid container direction="column" className={classes.mainContainer}>
         <Grid item>

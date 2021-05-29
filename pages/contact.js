@@ -199,6 +199,12 @@ const Contact = (props) => {
           key="description"
           content="Let us guide you through the custom software design and development process. Send us a message with any of your ideas or questions to get started!"
         />
+        <meta
+          property="og:title"
+          content="Bringing West Coast Technology to Canadian Prairies | Contact Us"
+          key="og:title"
+        />
+        <meta property="og:url" content="" key="og:url" />
       </Head>
       <Grid container direction="row">
         <Grid

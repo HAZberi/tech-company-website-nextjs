@@ -133,6 +133,12 @@ const Revolution = (props) => {
     <>
       <Head>
         <title key="title">Modern Development Revolution | beri.dev</title>
+        <meta
+          property="og:title"
+          content="Bringing West Coast Technology to Canadian Prairies | Revolution"
+          key="og:title"
+        />
+        <meta property="og:url" content="" key="og:url" />
       </Head>
       <Grid container direction="column">
         <Grid item className={classes.heading}>

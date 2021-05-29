@@ -159,6 +159,12 @@ const Software = (props) => {
           key="description"
           content="Cutting edge custom software development with gorgeous designs from scratch - let us optimize your business, solving problems instead of creating new ones."
         />
+        <meta
+          property="og:title"
+          content="Bringing West Coast Technology to Canadian Prairies | Custom Software Development"
+          key="og:title"
+        />
+        <meta property="og:url" content="" key="og:url" />
       </Head>
       <Grid container direction="column">
         <Grid

@@ -120,6 +120,12 @@ const About = (props) => {
           key="description"
           content="Get the fastest, most modern, affordable, and aesthetic software design and development services in Alberta. Get a free estimate now!"
         />
+        <meta
+          property="og:title"
+          content="Bringing West Coast Technology to Canadian Prairies | About Us"
+          key="og:title"
+        />
+        <meta property="og:url" content="" key="og:url" />
       </Head>
       <Grid container direction="column">
         <Grid item className={classes.heading}>
