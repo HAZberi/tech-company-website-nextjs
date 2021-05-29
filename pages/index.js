@@ -210,6 +210,7 @@ const LandingPage = (props) => {
           key="og:title"
         />
         <meta property="og:url" content="" key="og:url" />
+        <link rel="canonical" key="canonical" href="https://beritech.com/" />
       </Head>
       <Grid container direction="column" className={classes.mainContainer}>
         <Grid item>

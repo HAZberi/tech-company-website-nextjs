@@ -140,6 +140,11 @@ const Services = (props) => {
           key="og:title"
         />
         <meta property="og:url" content="" key="og:url" />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="https://beritech.com/services"
+        />
       </Head>
       <Grid container direction="column">
         <Grid

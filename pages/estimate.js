@@ -958,6 +958,11 @@ const Estimate = (props) => {
           key="og:title"
         />
         <meta property="og:url" content="" key="og:url" />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="https://beritech.com/estimate"
+        />
       </Head>
       <Grid container direction="row" style={{ marginBottom: "10em" }}>
         <Grid item container direction="column" md>

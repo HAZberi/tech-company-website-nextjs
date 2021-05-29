@@ -165,6 +165,11 @@ const Software = (props) => {
           key="og:title"
         />
         <meta property="og:url" content="" key="og:url" />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="https://beritech.com/software"
+        />
       </Head>
       <Grid container direction="column">
         <Grid

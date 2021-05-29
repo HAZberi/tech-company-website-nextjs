@@ -139,6 +139,11 @@ const Revolution = (props) => {
           key="og:title"
         />
         <meta property="og:url" content="" key="og:url" />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="https://beritech.com/revolution"
+        />
       </Head>
       <Grid container direction="column">
         <Grid item className={classes.heading}>

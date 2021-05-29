@@ -205,6 +205,11 @@ const Contact = (props) => {
           key="og:title"
         />
         <meta property="og:url" content="" key="og:url" />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="https://beritech.com/contact"
+        />
       </Head>
       <Grid container direction="row">
         <Grid

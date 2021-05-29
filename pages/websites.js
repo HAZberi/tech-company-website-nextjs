@@ -1,5 +1,5 @@
 import React from "react";
-import Head from "head/next";
+import Head from "next/head";
 import Link from "../src/Link.js";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
@@ -65,6 +65,11 @@ const Websites = (props) => {
           key="og:title"
         />
         <meta property="og:url" content="" key="og:url" />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="https://beritech.com/websites"
+        />
       </Head>
       <Grid container direction="column">
         <Grid
