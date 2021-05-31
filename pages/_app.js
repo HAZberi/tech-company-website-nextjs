@@ -5,6 +5,9 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "../src/ui/Theme";
 import Header from "../src/ui/Header";
 import Footer from "../src/ui/Footer";
+import ReactGA from "react-ga";
+
+ReactGA.initialize("G-90T82J0GZM");
 
 export default function MyApp(props) {
   const { Component, pageProps } = props;
