@@ -17,7 +17,7 @@
     "next-compose-plugins": "^2.2.1",
     "next-optimized-images": "^2.6.2",
     "prop-types": "latest",
-    "react": "latest",
+    "react": "^17.0.1",
     "react-dom": "latest",
     "react-lottie": "^1.2.3"
   },
