@@ -7,7 +7,7 @@ import Header from "../src/ui/Header";
 import Footer from "../src/ui/Footer";
 import ReactGA from "react-ga";
 
-ReactGA.initialize("G-90T82J0GZM");
+ReactGA.initialize("UA-194208690-1");
 
 export default function MyApp(props) {
   const { Component, pageProps } = props;
