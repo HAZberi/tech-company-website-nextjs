@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo, useCallback } from "react";
 import Link from "../Link";
+import ReactGA from "react-ga";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
@@ -65,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       textDecoration: "none",
       opacity: 1,
-    }
+    },
   },
   button: {
     ...theme.typography.estimate,
@@ -215,6 +216,7 @@ const Header = (props) => {
 
   const [openDrawer, setOpenDrawer] = useState(false);
   const [openDrawerMenu, setOpenDrawerMenu] = useState(false);
+  const [previousUrl, setPreviousUrl] = useState("");
 
   const handleMouseOver = useCallback(
     (e) => {
@@ -505,6 +507,10 @@ const Header = (props) => {
   );
 
   useEffect(() => {
+    if (previousUrl !== window.location.pathname) {
+      setPreviousUrl(window.location.pathname);
+      ReactGA.pageview(window.location.pathname + window.location.search);
+    }
     [...menuOptions, ...routes].forEach((route) => {
       switch (window.location.pathname) {
         case `${route.link}`:
