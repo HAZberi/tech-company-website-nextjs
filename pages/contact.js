@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ReactGA from "react-ga"
 import Head from "next/head";
 import axios from "axios";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
@@ -158,6 +159,10 @@ const Contact = (props) => {
   );
   const onConfirm = () => {
     setLoading(true);
+    ReactGA.event({
+      category: 'Contact',
+      action: 'User has sent a message'
+    });
     axios
       .get("https://us-central1-beri-tech.cloudfunctions.net/sendMail", {
         params: {

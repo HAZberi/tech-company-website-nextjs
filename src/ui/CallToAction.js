@@ -1,4 +1,5 @@
 import React from "react";
+import ReactGA from "react-ga";
 import Link from "../Link";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
@@ -133,6 +134,10 @@ const CallToAction = (props) => {
               onClick={() => {
                 props.setValue(5);
                 props.setSelected(null);
+                ReactGA.event({
+                  category: "Estimate",
+                  action: "Pressed Call to Action Button",
+                });
               }}
               variant="outlined"
               className={classes.estimateOutlineButton}

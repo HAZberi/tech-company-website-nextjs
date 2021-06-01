@@ -399,6 +399,10 @@ const Header = (props) => {
               closeDrawerAll();
               props.setSelected(null);
               props.setValue(routes.length);
+              ReactGA.event({
+                category: "Estimate",
+                action: "Pressed Header Estimate Button",
+              });
             }}
             component={Link}
             href="/estimate"
@@ -444,7 +448,13 @@ const Header = (props) => {
         ))}
       </Tabs>
       <Button
-        onClick={() => props.setValue(5)}
+        onClick={() => {
+          props.setValue(5);
+          ReactGA.event({
+            category: "Estimate",
+            action: "Pressed Header Estimate Button",
+          });
+        }}
         component={Link}
         href="/estimate"
         variant="contained"

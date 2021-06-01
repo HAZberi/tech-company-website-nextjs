@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import ReactGA from "react-ga"
 import Head from "next/head";
 import axios from "axios";
 import Lottie from "react-lottie";
@@ -766,6 +767,10 @@ const Estimate = (props) => {
 
   const placeRequest = () => {
     setLoading(true);
+    ReactGA.event({
+      category: 'Estimate',
+      action: 'User has placed an estimate request'
+    });
     axios
       .get("https://us-central1-beri-tech.cloudfunctions.net/sendMail", {
         params: {

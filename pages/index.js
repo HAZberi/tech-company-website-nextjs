@@ -1,4 +1,5 @@
 import React from "react";
+import ReactGA from "react-ga";
 import Head from "next/head";
 import Lottie from "react-lottie";
 import Link from "../src/Link";
@@ -238,6 +239,10 @@ const LandingPage = (props) => {
                     onClick={() => {
                       props.setValue(5);
                       props.setSelected(null);
+                      ReactGA.event({
+                        category: 'Estimate',
+                        action: 'Home Page Estimate Button'
+                      });
                     }}
                     color="secondary"
                     variant="contained"
